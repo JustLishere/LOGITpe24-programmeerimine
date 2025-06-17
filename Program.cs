@@ -1,31 +1,20 @@
-﻿namespace DataTypes
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Data Types!");
+def calculator():
+    num1 = float(input("Sisesta esimene number: "))
+    operation = input("Vali tehe (+, -, *, /): ")
+    num2 = float(input("Sisesta teine number: "))
 
-            //täisnumber
-            int bigNumber = 1234567890;
-            Console.WriteLine(bigNumber);
+    if operation == '+':
+        print("Vastus:", num1 + num2)
+    elif operation == '-':
+        print("Vastus:", num1 - num2)
+    elif operation == '*':
+        print("Vastus:", num1 * num2)
+    elif operation == '/':
+        if num2 != 0:
+            print("Vastus:", num1 / num2)
+        else:
+            print("Viga: Nulliga jagamine pole lubatud!")
+    else:
+        print("Viga: Vigane tehe!")
 
-            //komaga number ??
-            double komaNumber = 12.5;
-            Console.WriteLine(komaNumber);
-
-            //tähemärk
-            string stringVar = "¤¤¤)((y98y985(=)8";
-            Console.WriteLine(stringVar);
-
-            float floatVariable = 283.474f;
-            Console.WriteLine(floatVariable);
-
-            char cahrVariable = 'c';
-            Console.WriteLine(cahrVariable);
-
-            bool boolVariable = false;
-            Console.WriteLine(boolVariable);
-        }
-    }
-}
+calculator()
